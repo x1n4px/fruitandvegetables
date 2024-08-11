@@ -360,4 +360,5 @@ export class FruitsComponent {
     }
 ]
 
+
 }
