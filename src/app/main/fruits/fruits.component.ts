@@ -176,7 +176,7 @@ export class FruitsComponent {
             "grasas": 0.4,
             "fibra": 1.0
         },
-        "imagen": "https://www.quironsalud.com/idcsalud-client/cm/images?locale=es_ES&idMmedia=3153140"
+        "imagen": "https://www.calfruitos.com/fotos/pr_37_20170905173028.png"
     },
     {
         "nombre": "Mandarina",
