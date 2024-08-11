@@ -1,0 +1,65 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-12 py-12">
+  @for (fruit of fruits; track $index) {
+
+  @if (fruit.macros.fibra > 4) {
+  <section class="text-gray-600 body-font  border-4 border-red-500">
+    <div class="container px-5 py-8 mx-auto ">
+      <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
+        <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
+      </div>
+      <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
+        {{ fruit.nombre }}
+      </h2>
+
+      <p class="text-2xl font-bold text-center text-white bg-red-500 p-4 rounded-lg shadow-lg mt-4">
+        NO DEBERIAS COMER
+      </p>
+
+
+    </div>
+  </section>
+  }
+
+
+  @if (fruit.macros.fibra > 2 && fruit.macros.fibra <= 4) {
+  <section class="text-gray-600 body-font  border-4 border-yellow-500">
+    <div class="container px-5 py-8 mx-auto ">
+      <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
+        <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
+      </div>
+
+      <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
+        {{ fruit.nombre }}
+      </h2>
+
+      <p class="text-2xl font-bold text-center text-white bg-yellow-500 p-4 rounded-lg shadow-lg mt-4">
+        PUEDES COMER CON MODERACION
+      </p>
+
+
+    </div>
+  </section>
+  }
+
+
+  @if (fruit.macros.fibra <= 2) { <section class="text-gray-600 body-font  border-4 border-green-500">
+    <div class="container px-5 py-8 mx-auto ">
+      <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
+        <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
+      </div>
+      <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
+        {{ fruit.nombre }}
+      </h2>
+      <p class="text-2xl font-bold text-center text-white bg-green-500 p-4 rounded-lg shadow-lg mt-4">
+        PUEDES COMER
+      </p>
+
+
+    </div>
+    </section>
+    }
+
+
+
+    }
+</div>
