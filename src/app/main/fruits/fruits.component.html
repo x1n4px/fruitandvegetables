@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-12 py-12">
-  @for (fruit of fruits; track $index) {
+  @for (fruit of getFruitsOrderByFiber(); track $index) {
 
   @if (fruit.macros.fibra > 2.5) {
   <section class="text-gray-600 body-font  border-4 border-red-500">

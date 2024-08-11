@@ -120,7 +120,7 @@ export class FruitsComponent {
     },
     {
         "nombre": "Granada",
-        "tipo": "Frutra",
+        "tipo": "Fruta",
         "macros": {
             "calorias": 34.0,
             "carbohidratos": 7.5,
@@ -240,7 +240,7 @@ export class FruitsComponent {
     },
     {
         "nombre": "Membrillo",
-        "tipo": "Frutra",
+        "tipo": "Fruta",
         "macros": {
             "calorias": 42.0,
             "carbohidratos": 6.8,
@@ -359,6 +359,11 @@ export class FruitsComponent {
         "imagen": "https://www.gastronomiavasca.net/uploads/image/file/3436/uva_morada.jpg"
     }
 ]
+
+
+getFruitsOrderByFiber() {
+  return this.fruits.sort((a, b) => a.macros.fibra - b.macros.fibra);
+}
 
 
 }
