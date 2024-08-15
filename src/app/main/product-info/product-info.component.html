@@ -1,0 +1,60 @@
+<div class="max-w-4xl mx-auto p-6 bg-white ">
+  <div class="flex flex-col md:flex-row items-center">
+    <img class="w-48 h-48 object-cover rounded-full shadow-md mb-6 md:mb-0" [src]="product.imagen" alt="{{ product.nombre }}" />
+    <div class="md:ml-6">
+      <h1 class="text-3xl font-bold text-gray-800">{{ product.nombre }}</h1>
+      <p class="text-lg text-gray-600">Tipo: {{ product.tipo }}</p>
+    </div>
+  </div>
+
+  <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-gray-100 p-4 rounded-lg">
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Macronutrientes</h2>
+      <ul class="text-gray-700">
+        <li>Calorías: {{ product.macros.calorias }} kcal</li>
+        <li>Proteínas: {{ product.macros.proteinas }} g</li>
+        <li>Grasas: {{ product.macros.grasas }} g</li>
+        <li>AGSaturados: {{ product.macros.AGSaturados }} g</li>
+        <li>AGMonoInsaturados: {{ product.macros.AGMonoInSaturados }} g</li>
+        <li>AGPoliinsaturados: {{ product.macros.AGPoliinsaturados }} g</li>
+        <li>Omega 3: {{ product.macros.Omega3 }} g</li>
+        <li>C18:2 Linoleico: {{ product.macros.C182Linoleico }} g</li>
+        <li>Colesterol: {{ product.macros.Colesterol }} mg</li>
+        <li>Carbohidratos: {{ product.macros.carbohidratos }} g</li>
+        <li>Fibra: {{ product.macros.fibra }} g</li>
+        <li>Agua: {{ product.macros.agua }} %</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-100 p-4 rounded-lg">
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Minerales</h2>
+      <ul class="text-gray-700">
+        <li>Calcio: {{ product.macros.minerales.calcio }} mg</li>
+        <li>Hierro: {{ product.macros.minerales.Hierro }} mg</li>
+        <li>Yodo: {{ product.macros.minerales.Yodo }} µg</li>
+        <li>Magnesio: {{ product.macros.minerales.Magnesio }} mg</li>
+        <li>Zinc: {{ product.macros.minerales.Zinc }} mg</li>
+        <li>Sodio: {{ product.macros.minerales.Sodio }} mg</li>
+        <li>Potasio: {{ product.macros.minerales.Potasio }} mg</li>
+        <li>Fósforo: {{ product.macros.minerales.Fosforo }} mg</li>
+        <li>Selenio: {{ product.macros.minerales.Selenio }} µg</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-100 p-4 rounded-lg">
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Vitaminas</h2>
+      <ul class="text-gray-700">
+        <li>Tiamina (B1): {{ product.macros.vitaminas.Tiamina }} mg</li>
+        <li>Riboflavina (B2): {{ product.macros.vitaminas.Riboflavina }} mg</li>
+        <li>Niacina (B3): {{ product.macros.vitaminas.Niacina }} mg</li>
+        <li>B8: {{ product.macros.vitaminas.B8 }} mg</li>
+        <li>Folatos: {{ product.macros.vitaminas.Folatos }} µg</li>
+        <li>Vitamina B12: {{ product.macros.vitaminas.B12 }} µg</li>
+        <li>Vitamina C: {{ product.macros.vitaminas.C }} mg</li>
+        <li>Vitamina A: {{ product.macros.vitaminas.A }} µg</li>
+        <li>Vitamina D: {{ product.macros.vitaminas.D }} µg</li>
+        <li>Vitamina E: {{ product.macros.vitaminas.E }} mg</li>
+      </ul>
+    </div>
+  </div>
+</div>
