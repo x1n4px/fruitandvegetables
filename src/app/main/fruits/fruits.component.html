@@ -2,7 +2,7 @@
   @for (fruit of getFruitsOrderByFiber(); track $index) {
 
   @if (fruit.macros.fibra > 2.5) {
-  <section class="text-gray-600 body-font  border-4 border-red-500" (click)="goTo(fruit.name)">
+  <section class="text-gray-600 body-font  border-4 border-red-500" (click)="goTo(fruit.nombre)">
     <div class="container px-5 py-8 mx-auto ">
       <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
         <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
@@ -22,7 +22,7 @@
 
 
   @if (fruit.macros.fibra > 1.5 && fruit.macros.fibra <= 2.5) {
-  <section class="text-gray-600 body-font  border-4 border-yellow-500" (click)="goTo(fruit.name)">
+  <section class="text-gray-600 body-font  border-4 border-yellow-500" (click)="goTo(fruit.nombre)">
     <div class="container px-5 py-8 mx-auto ">
       <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
         <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
