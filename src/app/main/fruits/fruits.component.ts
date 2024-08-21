@@ -35,7 +35,7 @@ export class FruitsComponent implements OnInit {
       this.orderMacro = attribute;
       this.orderedList = this.getFruitsOrderedBy(attribute);
     } else if(attribute === 'undefined') {
-     this.orderedList = this.fruits.sort((a, b) => a.name.localeCompare(b.name));
+      this.orderedList = this.fruits.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
     }
   }
 
@@ -43,19 +43,9 @@ export class FruitsComponent implements OnInit {
 
   getFruitsOrderedBy(attribute = 'fibra') {
     return this.fruits
-      .map(fruit => this.flattenFruitData(fruit)) // Aplana los datos
       .sort((a, b) => b[attribute] - a[attribute]);
   }
 
-
-  flattenFruitData(fruit:any) {
-    return {
-      ...fruit,
-      ...fruit.macros,
-      ...fruit.macros.minerales,
-      ...fruit.macros.vitaminas
-    };
-  }
 
 
 

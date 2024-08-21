@@ -555,7 +555,7 @@ export class DataService {
       "imagen": "https://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/14.jpg"
     },
     {
-      "nombre": "Limon",
+      "nombre": "Limón",
       "tipo": "Fruta",
       "macros": {
         "calorias": 44.0,
@@ -594,7 +594,7 @@ export class DataService {
           "E": 0.5
         }
       },
-      "imagen": "https://www.quironsalud.com/idcsalud-client/cm/images?locale=es_ES&idMmedia=3153140"
+      "imagen": "https://www.quironsalud.com/es/comunicacion/actualidad/limon.ficheros/3153140-limon.jpg?width=400&height=297&aspectRatio=true"
     },
     {
       "nombre": "Mandarina",
@@ -720,7 +720,7 @@ export class DataService {
           "E": 0.0
         }
       },
-      "imagen": "https://lh6.googleusercontent.com/proxy/E5CY5Q6vG1Gag5WVAU-RSrg4s-xmkZiV5B7-EBS2B68f1rYNugQyldT_Z9brbe7TpFB8jSkmmxFq1MiXHikTHqiz6VtaMnRmBv1ID1TAKWfU2KWy4-CKD7xEObEW53hcxcP0FH_xiQ2tv1Js"
+      "imagen": "https://vergelblanca.com/wp-content/uploads/2015/03/prod_melocoton.png"
     },
     {
       "nombre": "Melocoton en almibar",
@@ -762,7 +762,7 @@ export class DataService {
           "E": 0.0
         }
       },
-      "imagen": "https://imag.bonviveur.com/melocoton-en-almibar.jpg"
+      "imagen": "https://st2.depositphotos.com/1821481/12345/i/450/depositphotos_123455572-stock-photo-peaches-in-syrup-on-a.jpg"
     },
     {
       "nombre": "Melon",
@@ -1350,7 +1350,7 @@ export class DataService {
           "E": 0.2
         }
       },
-      "imagen": "https://imgs.search.brave.com/YfnTwbQNACzdcxtgdp0VpXF_iOfPsXhhSVKj-lEA-tk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2FsdWQubWFwZnJl/LmVzL21lZGlhLzIw/MTYvMDcvYWxjYWNo/b2ZhMS0zLmpwZw"
+      "imagen": "https://www.obesidadenmallorca.com/wp-content/uploads/2019/03/images_blog_obesidad-en-mallorca-alcachofa.jpg"
     },
     {
       "nombre": "Alcaparra",

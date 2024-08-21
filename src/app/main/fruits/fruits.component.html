@@ -50,7 +50,7 @@
 
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-12 py-12">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-12 py-12">
   @for (fruit of orderedList; track $index) {
 
   <!-- @if (orderMacro === 'fibra') {
@@ -118,11 +118,11 @@
 
 
       } -->
-      <!-- @if (orderMacro !== 'fibra') { -->
-        <section class="text-gray-600 body-font  border-4 border-gray-500"
+  <!-- @if (orderMacro !== 'fibra') { -->
+  <!-- <section class="text-gray-600 body-font  border-4 border-gray-500"
         (click)="goTo(fruit.nombre)">
         <div class="container px-5 py-8 mx-auto ">
-          <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
+          <div class="rounded-lg h-64 overflow-hidden">
             <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
           </div>
           <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
@@ -134,9 +134,30 @@
 
 
         </div>
-        </section>
-      }
-      <!-- } -->
+        </section> -->
+
+
+        <div class="w-full max-w-sm bg-white border border-gray-100 rounded-lg shadow flex flex-col h-full">
+          <a  class="flex-shrink-0 h-4/6">
+            <img class="w-full h-full object-cover rounded-t-lg " [src]="fruit.imagen" alt="product image" />
+          </a>
+          <div class="flex-grow px-5 pb-5 flex flex-col justify-between">
+            <a >
+              <h5 class="text-3xl font-semibold tracking-tight text-black">{{ fruit.nombre }}</h5>
+            </a>
+
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xl font-bold">{{ orderMacro }}: {{ fruit[orderMacro] }} {{ measurementValue }}</span>
+              <a (click)="goTo(fruit.nombre)"
+                class="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+
+
+  }
+  <!-- } -->
 
 
 </div>
