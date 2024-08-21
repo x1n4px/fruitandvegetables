@@ -1,10 +1,64 @@
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-12 mx-auto">
+    <div class="w-full md:w-1/2 mx-auto">
+      <h2 class="text-2xl font-bold text-center text-black mb-4">Filtrar por Características Nutricionales</h2>
+      <select class="w-full p-3 bg-white border border-gray-300 rounded-lg shadow-md"
+        (change)="filterFruits($event.target)">
+        <option value="undefined">Selecciona una característica</option>
+        <optgroup label="Macros">
+          <option value="calorias">Calorías</option>
+          <option value="proteinas">Proteínas</option>
+          <option value="grasas">Grasas</option>
+          <option value="AGSaturados">Ácidos Grasos Saturados</option>
+          <option value="AGMonoInSaturados">Ácidos Grasos Monoinsaturados</option>
+          <option value="AGPoliinsaturados">Ácidos Grasos Poliinsaturados</option>
+          <option value="Omega3">Omega 3</option>
+          <option value="C182Linoleico">C18:2 Linoleico</option>
+          <option value="Colesterol">Colesterol</option>
+          <option value="carbohidratos">Carbohidratos</option>
+          <option value="fibra">Fibra</option>
+          <option value="agua">Agua</option>
+        </optgroup>
+        <optgroup label="Minerales">
+          <option value="calcio">Calcio</option>
+          <option value="Hierro">Hierro</option>
+          <option value="Yodo">Yodo</option>
+          <option value="Magnesio">Magnesio</option>
+          <option value="Zinc">Zinc</option>
+          <option value="Sodio">Sodio</option>
+          <option value="Potasio">Potasio</option>
+          <option value="Fosforo">Fósforo</option>
+          <option value="Selenio">Selenio</option>
+        </optgroup>
+        <optgroup label="Vitaminas">
+          <option value="Tiamina">Tiamina (B1)</option>
+          <option value="Riboflavina">Riboflavina (B2)</option>
+          <option value="Niacina">Niacina (B3)</option>
+          <option value="B8">Biotina (B8)</option>
+          <option value="Folatos">Folatos (B9)</option>
+          <option value="B12">Cobalamina (B12)</option>
+          <option value="C">Vitamina C</option>
+          <option value="A">Vitamina A</option>
+          <option value="D">Vitamina D</option>
+          <option value="E">Vitamina E</option>
+        </optgroup>
+      </select>
+    </div>
+  </div>
+</section>
+
+
+
+
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-12 py-12">
-  @for (fruit of getFruitsOrderByFiber(); track $index) {
+  @for (fruit of orderedList; track $index) {
+
+  <!-- @if (orderMacro === 'fibra') {
 
   @if (fruit.macros.fibra > 2.5) {
   <section class="text-gray-600 body-font  border-4 border-red-500" (click)="goTo(fruit.nombre)">
     <div class="container px-5 py-8 mx-auto ">
-      <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
+      <div class="rounded-lg h-64 overflow-hidden">
         <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
       </div>
       <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
@@ -21,10 +75,10 @@
   }
 
 
-  @if (fruit.macros.fibra > 1.5 && fruit.macros.fibra <= 2.5) {
-  <section class="text-gray-600 body-font  border-4 border-yellow-500" (click)="goTo(fruit.nombre)">
+  @if (fruit.macros.fibra > 1.5 && fruit.macros.fibra <= 2.5) { <section
+    class="text-gray-600 body-font  border-4 border-yellow-500" (click)="goTo(fruit.nombre)">
     <div class="container px-5 py-8 mx-auto ">
-      <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
+      <div class="rounded-lg h-64 overflow-hidden">
         <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
       </div>
 
@@ -38,28 +92,51 @@
 
 
     </div>
-  </section>
-  }
-
-
-  @if (fruit.macros.fibra <= 1.5) { <section class="text-gray-600 body-font  border-4 border-green-500"  (click)="goTo(fruit.nombre)">
-    <div class="container px-5 py-8 mx-auto ">
-      <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
-        <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
-      </div>
-      <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
-        {{ fruit.nombre }}
-      </h2>
-      <p class="text-2xl font-bold text-center text-white bg-green-500 p-4 rounded-lg shadow-lg mt-4">
-        PUEDES COMER
-      </p>
-
-
-    </div>
     </section>
     }
 
 
+    @if (fruit.macros.fibra <= 1.5) {
+      <section class="text-gray-600 body-font  border-4 border-green-500"
+      (click)="goTo(fruit.nombre)">
+      <div class="container px-5 py-8 mx-auto ">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
+        </div>
+        <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
+          {{ fruit.nombre }}
+        </h2>
+        <p class="text-2xl font-bold text-center text-white bg-green-500 p-4 rounded-lg shadow-lg mt-4">
+          PUEDES COMER
+        </p>
 
-    }
+
+      </div>
+      </section>
+      }
+
+
+
+      } -->
+      <!-- @if (orderMacro !== 'fibra') { -->
+        <section class="text-gray-600 body-font  border-4 border-gray-500"
+        (click)="goTo(fruit.nombre)">
+        <div class="container px-5 py-8 mx-auto ">
+          <div class="rounded-lg h-64 overflow-hidden"> <!-- Aquí se añade el borde -->
+            <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
+          </div>
+          <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
+            {{ fruit.nombre }}
+          </h2>
+          <p class="text-2xl font-bold text-center text-black bg-gray-200 p-4 rounded-lg shadow-lg mt-4">
+            {{orderMacro}}: {{fruit[orderMacro]}} {{measurementValue}}
+          </p>
+
+
+        </div>
+        </section>
+      }
+      <!-- } -->
+
+
 </div>

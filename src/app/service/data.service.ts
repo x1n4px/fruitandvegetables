@@ -8,7 +8,6 @@ export class DataService {
   constructor() { }
 
   fruits = [
-
     {
       "nombre": "Aguacate",
       "tipo": "Fruta",
@@ -91,7 +90,7 @@ export class DataService {
           "E": 0.0
         }
       },
-      "imagen": "https://imgs.search.brave.com/SYQqtaKGFDAgsB5YTAN9UvgaEzJr_zh6_ygtt1r2pPE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YWxsbmF0dXJhbGJp/bGJhby5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjEvMDYv/NDY3NDRGQkUtQjFD/MS00MjdGLUE0NjIt/QkY5MDI2NkQyQzg3/LmpwZWc"
+      "imagen": "https://soycomocomo.es/media/2015/06/albercoco-600.gif"
     },
     {
       "nombre": "Caqui",
@@ -1226,18 +1225,525 @@ export class DataService {
         }
       },
       "imagen": "https://www.gastronomiavasca.net/uploads/image/file/3436/uva_morada.jpg"
+    },
+    {
+      "nombre": "Acelga",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 41.0,
+        "proteinas": 2.0,
+        "grasas": 0.4,
+        "AGSaturados": 0.03,
+        "AGMonoInSaturados": 0.04,
+        "AGPoliinsaturados": 0.07,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 4.5,
+        "fibra": 5.6,
+        "agua": 87.5,
+        "minerales": {
+          "calcio": 113.0,
+          "Hierro": 3.0,
+          "Yodo": 35.0,
+          "Magnesio": 71.0,
+          "Zinc": 0.02,
+          "Sodio": 147.0,
+          "Potasio": 550.0,
+          "Fosforo": 40.0,
+          "Selenio": 0.9
+        },
+        "vitaminas": {
+          "Tiamina": 0.07,
+          "Riboflavina": 0.06,
+          "Niacina": 2.1,
+          "B8": 0.0,
+          "Folatos": 140.0,
+          "B12": 0.0,
+          "C": 20.0,
+          "A": 183.0,
+          "D": 0.0,
+          "E": 0.03
+        }
+      },
+      "imagen": "https://imgs.search.brave.com/kOgzu5t_6yZ3gIuaPjc_ItfxnC1dv6CrGCVVVtFOk8Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMy5w/cGxsc3RhdGljcy5j/b20vZGlhcmlvdmFz/Y28vd3d3L211bHRp/bWVkaWEvMjAyMy8x/MS8xMy9BQ0VMR0FT/d2ViLVJQVUx6aGRP/SzlXcmR1bTkwRENO/N1JLLTEyMDB4ODQw/QERpYXJpbyUyMFZh/c2NvLmpwZw"
+    },
+    {
+      "nombre": "Ajo",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 118.0,
+        "proteinas": 5.3,
+        "grasas": 0.3,
+        "AGSaturados": 0.05,
+        "AGMonoInSaturados": 0.0,
+        "AGPoliinsaturados": 0.15,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 23.0,
+        "fibra": 1.1,
+        "agua": 70.3,
+        "minerales": {
+          "calcio": 14.0,
+          "Hierro": 1.5,
+          "Yodo": 94.0,
+          "Magnesio": 25.0,
+          "Zinc": 1.0,
+          "Sodio": 19.0,
+          "Potasio": 529.0,
+          "Fosforo": 134.0,
+          "Selenio": 2.0
+        },
+        "vitaminas": {
+          "Tiamina": 0.16,
+          "Riboflavina": 0.02,
+          "Niacina": 1.3,
+          "B8": 0.38,
+          "Folatos": 5.0,
+          "B12": 0.0,
+          "C": 11.0,
+          "A": 0.0,
+          "D": 0.0,
+          "E": 0.01
+        }
+      },
+      "imagen": "https://imgs.search.brave.com/-TTEmBLoRAm55A4k3M4elIF_NgKZPqSnlPLxu9ae3sA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bGVjaGVwdWxldmEu/ZXMvZG9jdW1lbnRz/LzEzOTMwLzIwMzIy/Mi9ham9fZy5qcGcv/OGMyZTMyNWEtMjc3/NC00ZmNiLWJkMzct/YzZhNTcwY2M4Yzg1/P3Q9MTQyMjg3MTc4/NTAwMA"
+    },
+    {
+      "nombre": "Alcachofa",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 44.0,
+        "proteinas": 2.3,
+        "grasas": 0.1,
+        "AGSaturados": 0.02,
+        "AGMonoInSaturados": 0.01,
+        "AGPoliinsaturados": 0.05,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 7.5,
+        "fibra": 2.0,
+        "agua": 88.1,
+        "minerales": {
+          "calcio": 45.0,
+          "Hierro": 1.5,
+          "Yodo": 1.0,
+          "Magnesio": 12.0,
+          "Zinc": 0.1,
+          "Sodio": 47.0,
+          "Potasio": 430.0,
+          "Fosforo": 130.0,
+          "Selenio": 0.7
+        },
+        "vitaminas": {
+          "Tiamina": 0.11,
+          "Riboflavina": 0.03,
+          "Niacina": 0.6,
+          "B8": 0.07,
+          "Folatos": 13.0,
+          "B12": 0.0,
+          "C": 9.0,
+          "A": 8.0,
+          "D": 0.0,
+          "E": 0.2
+        }
+      },
+      "imagen": "https://imgs.search.brave.com/YfnTwbQNACzdcxtgdp0VpXF_iOfPsXhhSVKj-lEA-tk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2FsdWQubWFwZnJl/LmVzL21lZGlhLzIw/MTYvMDcvYWxjYWNo/b2ZhMS0zLmpwZw"
+    },
+    {
+      "nombre": "Alcaparra",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 44.0,
+        "proteinas": 2.4,
+        "grasas": 0.9,
+        "AGSaturados": 0.23,
+        "AGMonoInSaturados": 0.06,
+        "AGPoliinsaturados": 0.3,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 4.9,
+        "fibra": 3.2,
+        "agua": 88.6,
+        "minerales": {
+          "calcio": 40.0,
+          "Hierro": 1.67,
+          "Yodo": 0.0,
+          "Magnesio": 33.0,
+          "Zinc": 0.32,
+          "Sodio": 2.964,
+          "Potasio": 40.0,
+          "Fosforo": 10.0,
+          "Selenio": 1.2
+        },
+        "vitaminas": {
+          "Tiamina": 0.02,
+          "Riboflavina": 0.14,
+          "Niacina": 0.65,
+          "B8": 0.02,
+          "Folatos": 0.0,
+          "B12": 0.0,
+          "C": 4.3,
+          "A": 14.0,
+          "D": 0.0,
+          "E": 0.9
+        }
+      },
+      "imagen": "https://imgs.search.brave.com/Ik9Q0F-f6-fDktXZXf6zCQieyNe64E8HidipU0Te6cc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzA0Lzk1Lzk3/LzM2MF9GXzUwNDk1/OTc5NV80QWNuNlB0/bWpVT3lNa3c2RUE1/UURHQ2M2TWNWSEZF/NS5qcGc"
+    },
+    {
+      "nombre": "Apio",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 16.0,
+        "proteinas": 1.3,
+        "grasas": 0.2,
+        "AGSaturados": 0.0,
+        "AGMonoInSaturados": 0.0,
+        "AGPoliinsaturados": 0.1,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 1.3,
+        "fibra": 1.8,
+        "agua": 95.4,
+        "minerales": {
+          "calcio": 55.0,
+          "Hierro": 0.6,
+          "Yodo": 0.0,
+          "Magnesio": 15.0,
+          "Zinc": 0.1,
+          "Sodio": 126.0,
+          "Potasio": 341.0,
+          "Fosforo": 32.0,
+          "Selenio": 3.0
+        },
+        "vitaminas": {
+          "Tiamina": 0.04,
+          "Riboflavina": 0.04,
+          "Niacina": 0.7,
+          "B8": 0.1,
+          "Folatos": 12.0,
+          "B12": 0.0,
+          "C": 7.0,
+          "A": 95.0,
+          "D": 0.0,
+          "E": 0.2
+        }
+      },
+      "imagen": "https://imgs.search.brave.com/bzORGB27KhaokEaJGmb7aGorOwkKxeWJCXU0YYrffqQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlbnNhbGlicmUu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI0LzAyL1BhcmEt/cXVlLXNpcnZlLWVs/LWFwaW8teS1zdXMt/YmVuZWZpY2lvcy0y/LmpwZz9xdWFsaXR5/PTUy"
+    },
+    {
+      "nombre": "Batata",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 101.0,
+        "proteinas": 1.2,
+        "grasas": 0.6,
+        "AGSaturados": 0.23,
+        "AGMonoInSaturados": 0.04,
+        "AGPoliinsaturados": 0.2,
+        "Omega3": 0.033,
+        "C182Linoleico": 0.165,
+        "Colesterol": 0.0,
+        "carbohidratos": 21.5,
+        "fibra": 2.5,
+        "agua": 74.2,
+        "minerales": {
+          "calcio": 22.0,
+          "Hierro": 0.7,
+          "Yodo": 2.0,
+          "Magnesio": 13.0,
+          "Zinc": 0.3,
+          "Sodio": 19.0,
+          "Potasio": 320.0,
+          "Fosforo": 60.0,
+          "Selenio": 1.0
+        },
+        "vitaminas": {
+          "Tiamina": 0.1,
+          "Riboflavina": 0.06,
+          "Niacina": 1.2,
+          "B8": 0.22,
+          "Folatos": 52.0,
+          "B12": 0.0,
+          "C": 25.0,
+          "A": 667.0,
+          "D": 0.0,
+          "E": 4.0
+        }
+      },
+      "imagen": "https://imgs.search.brave.com/p2d6RTeSWB9Ha16Kyy3kZTy7BgDjp68DPY5SmWnYvRw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tbGN2/a29jcmZwb28uaS5v/cHRpbW9sZS5jb20v/dzphdXRvL2g6YXV0/by9xOm1hdXRvL2Y6/YXZpZi9odHRwczov/L3d3dy5lY29vcGVy/YXRpdmFzLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMC8x/MS9iYXRhdGEuanBn"
+    },
+    {
+      "nombre": "Berenjena",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 27.0,
+        "proteinas": 1.2,
+        "grasas": 0.2,
+        "AGSaturados": 0.05,
+        "AGMonoInSaturados": 0.0,
+        "AGPoliinsaturados": 0.1,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 4.4,
+        "fibra": 1.2,
+        "agua": 93.0,
+        "minerales": {
+          "calcio": 11.0,
+          "Hierro": 0.7,
+          "Yodo": 2.0,
+          "Magnesio": 12.0,
+          "Zinc": 0.28,
+          "Sodio": 2.0,
+          "Potasio": 214.0,
+          "Fosforo": 21.4,
+          "Selenio": 1.0
+        },
+        "vitaminas": {
+          "Tiamina": 0.04,
+          "Riboflavina": 0.05,
+          "Niacina": 0.6,
+          "B8": 0.08,
+          "Folatos": 18.0,
+          "B12": 0.0,
+          "C": 6.0,
+          "A": 3.0,
+          "D": 0.0,
+          "E": 0.03
+        }
+      },
+      "imagen": "https://www.gastronomiavasca.net/uploads/image/file/5702/w700_berenjena1.jpg"
+    },
+    {
+      "nombre": "Berros",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 29.0,
+        "proteinas": 3.0,
+        "grasas": 1.0,
+        "AGSaturados": 0.3,
+        "AGMonoInSaturados": 0.1,
+        "AGPoliinsaturados": 0.4,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 0.4,
+        "fibra": 3.0,
+        "agua": 92.6,
+        "minerales": {
+          "calcio": 170.0,
+          "Hierro": 2.2,
+          "Yodo": 0.0,
+          "Magnesio": 15.0,
+          "Zinc": 0.7,
+          "Sodio": 49.0,
+          "Potasio": 230.0,
+          "Fosforo": 52.0,
+          "Selenio": 0.9
+        },
+        "vitaminas": {
+          "Tiamina": 0.16,
+          "Riboflavina": 0.06,
+          "Niacina": 0.3,
+          "B8": 0.23,
+          "Folatos": 214.0,
+          "B12": 0.0,
+          "C": 62.0,
+          "A": 420.0,
+          "D": 0.0,
+          "E": 1.46
+        }
+      },
+      "imagen": "https://static.elnortedecastilla.es/www/multimedia/201903/12/media/cortadas/berros-kTQE-U70890917574eCF-624x385@El%20Norte.jpg"
+    },
+    {
+      "nombre": "Berza",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 36.0,
+        "proteinas": 3.3,
+        "grasas": 0.3,
+        "AGSaturados": 0.0,
+        "AGMonoInSaturados": 0.0,
+        "AGPoliinsaturados": 0.1,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 3.4,
+        "fibra": 3.3,
+        "agua": 89.7,
+        "minerales": {
+          "calcio": 40.0,
+          "Hierro": 0.8,
+          "Yodo": 0.0,
+          "Magnesio": 13.0,
+          "Zinc": 0.3,
+          "Sodio": 12.0,
+          "Potasio": 310.0,
+          "Fosforo": 53.0,
+          "Selenio": 2.0
+        },
+        "vitaminas": {
+          "Tiamina": 0.04,
+          "Riboflavina": 0.08,
+          "Niacina": 1.1,
+          "B8": 0.16,
+          "Folatos": 79.0,
+          "B12": 0.0,
+          "C": 65.0,
+          "A": 4.0,
+          "D": 0.0,
+          "E": 0.2
+        }
+      },
+      "imagen": "https://escofruit.com/wp-content/uploads/2023/02/berza-verde-aislado-sobre-fondo-blanco.jpg"
+    },
+    {
+      "nombre": "Br\u00f3coli",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 38.0,
+        "proteinas": 4.4,
+        "grasas": 0.8,
+        "AGSaturados": 0.2,
+        "AGMonoInSaturados": 0.1,
+        "AGPoliinsaturados": 0.5,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 1.8,
+        "fibra": 2.6,
+        "agua": 90.3,
+        "minerales": {
+          "calcio": 56.0,
+          "Hierro": 1.7,
+          "Yodo": 2.0,
+          "Magnesio": 22.0,
+          "Zinc": 0.6,
+          "Sodio": 8.0,
+          "Potasio": 370.0,
+          "Fosforo": 87.0,
+          "Selenio": 0.0
+        },
+        "vitaminas": {
+          "Tiamina": 0.1,
+          "Riboflavina": 0.06,
+          "Niacina": 1.7,
+          "B8": 0.14,
+          "Folatos": 90.0,
+          "B12": 0.0,
+          "C": 87.0,
+          "A": 69.0,
+          "D": 0.0,
+          "E": 1.3
+        }
+      },
+      "imagen": "https://elpoderdelconsumidor.org/wp-content/uploads/2016/11/brocoli.jpg"
+    },
+    {
+      "nombre": "Calabac\u00edn",
+      "tipo": "Verdura",
+      "macros": {
+        "calorias": 14.0,
+        "proteinas": 0.6,
+        "grasas": 0.2,
+        "AGSaturados": 0.0,
+        "AGMonoInSaturados": 0.0,
+        "AGPoliinsaturados": 0.0,
+        "Omega3": 0.0,
+        "C182Linoleico": 0.0,
+        "Colesterol": 0.0,
+        "carbohidratos": 2.2,
+        "fibra": 0.5,
+        "agua": 96.5,
+        "minerales": {
+          "calcio": 24.0,
+          "Hierro": 0.4,
+          "Yodo": 0.0,
+          "Magnesio": 8.0,
+          "Zinc": 0.2,
+          "Sodio": 1.0,
+          "Potasio": 140.0,
+          "Fosforo": 17.0,
+          "Selenio": 1.0
+        },
+        "vitaminas": {
+          "Tiamina": 0.04,
+          "Riboflavina": 0.04,
+          "Niacina": 0.6,
+          "B8": 0.06,
+          "Folatos": 13.0,
+          "B12": 0.0,
+          "C": 22.0,
+          "A": 4.5,
+          "D": 0.0,
+          "E": 0.0
+        }
+      },
+      "imagen": "https://alimentamerindades.org/wp-content/uploads/2024/03/CALABACIN-ECOLOGICO-COMEDELAHUERTA-1.jpg"
     }
   ]
 
+  private measurementvalue: { [key: string]: string } = {
+    "calorias": "Kcal",
+    "proteinas": "g",
+    "grasas": "g",
+    "AGSaturados": "g",
+    "AGMonoInSaturados": "g",
+    "AGPoliinsaturados": "g",
+    "Omega3": "g",
+    "C182Linoleico": "g",
+    "Colesterol": "mg/1000 Kcal",
+    "carbohidratos": "g",
+    "fibra": "g",
+    "agua": "g",
+    "calcio": "mg",
+    "Hierro": "mg",
+    "Yodo": "µg",
+    "Magnesio": "mg",
+    "Zinc": "mg",
+    "Sodio": "mg",
+    "Potasio": "mg",
+    "Fosforo": "mg",
+    "Selenio": "µg",
+    "Tiamina": "mg",
+    "Riboflavina": "mg",
+    "Niacina": "mg",
+    "B8": "µg",
+    "Folatos": "µg",
+    "B12": "µg",
+    "C": "mg",
+    "A": "µg",
+    "D": "µg",
+    "E": "mg"
+  };
 
+  // Método para obtener la unidad de medida
+  getMeasurementUnit(key: keyof typeof this.measurementvalue): string {
+    return this.measurementvalue[key] || "Unidad no encontrada";
+  }
 
   getAllFruits() {
-    return this.fruits;
+    return this.fruits.map(fruit => this.flattenFruitData(fruit)) ;
   }
 
   getFruit(name: string) {
     return this.fruits.find(fruit => fruit.nombre === name);
   }
 
+  flattenFruitData(fruit:any) {
+    return {
+      ...fruit,
+      ...fruit.macros,
+      ...fruit.macros.minerales,
+      ...fruit.macros.vitaminas
+    };
+  }
 
 }
