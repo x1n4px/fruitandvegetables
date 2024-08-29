@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../service/data.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-fruits',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './fruits.component.html',
   styleUrl: './fruits.component.css'
 })
 export class FruitsComponent implements OnInit {
+
+
+
+  selectedMacro: string = 'undefined'; // Preselecciona el valor como 'undefined'
+  isFruitSelected: boolean = false; // Preselección: desmarcado
+  isVegetableSelected: boolean = false; // Preselección: desmarcado
+  searchQuery: string = '';
 
 
   fruits: any[] = [];
@@ -47,6 +55,26 @@ export class FruitsComponent implements OnInit {
   }
 
 
+  // Método para aplicar los filtros
+  applyFilters() {
+    this.orderedList = this.fruits.filter(fruit => {
+      const matchesCategory = (this.isFruitSelected && fruit.tipo === 'Fruta') ||
+                              (this.isVegetableSelected && fruit.tipo === 'Verdura');
+      const matchesSearch = !this.searchQuery || fruit.nombre.toLowerCase().includes(this.searchQuery.toLowerCase());
+      const matchesMacro = this.getFruitsOrderedBy(this.selectedMacro);
+
+      return matchesCategory && matchesSearch && matchesMacro;
+    });
+  }
+
+  // Método para limpiar los filtros
+  clearFilters() {
+    this.selectedMacro = 'undefined';
+    this.isFruitSelected = false;
+    this.isVegetableSelected = false;
+    this.searchQuery = '';
+    this.orderedList = [...this.fruits]; // Resetea la lista filtrada a la lista completa
+  }
 
 
 

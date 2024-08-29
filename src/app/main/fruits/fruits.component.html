@@ -2,162 +2,103 @@
   <div class="container px-5 py-12 mx-auto">
     <div class="w-full md:w-1/2 mx-auto">
       <h2 class="text-2xl font-bold text-center text-black mb-4">Filtrar por Características Nutricionales</h2>
-      <select class="w-full p-3 bg-white border border-gray-300 rounded-lg shadow-md"
-        (change)="filterFruits($event.target)">
-        <option value="undefined">Selecciona una característica</option>
-        <optgroup label="Macros">
-          <option value="calorias">Calorías</option>
-          <option value="proteinas">Proteínas</option>
-          <option value="grasas">Grasas</option>
-          <option value="AGSaturados">Ácidos Grasos Saturados</option>
-          <option value="AGMonoInSaturados">Ácidos Grasos Monoinsaturados</option>
-          <option value="AGPoliinsaturados">Ácidos Grasos Poliinsaturados</option>
-          <option value="Omega3">Omega 3</option>
-          <option value="C182Linoleico">C18:2 Linoleico</option>
-          <option value="Colesterol">Colesterol</option>
-          <option value="carbohidratos">Carbohidratos</option>
-          <option value="fibra">Fibra</option>
-          <option value="agua">Agua</option>
-        </optgroup>
-        <optgroup label="Minerales">
-          <option value="calcio">Calcio</option>
-          <option value="Hierro">Hierro</option>
-          <option value="Yodo">Yodo</option>
-          <option value="Magnesio">Magnesio</option>
-          <option value="Zinc">Zinc</option>
-          <option value="Sodio">Sodio</option>
-          <option value="Potasio">Potasio</option>
-          <option value="Fosforo">Fósforo</option>
-          <option value="Selenio">Selenio</option>
-        </optgroup>
-        <optgroup label="Vitaminas">
-          <option value="Tiamina">Tiamina (B1)</option>
-          <option value="Riboflavina">Riboflavina (B2)</option>
-          <option value="Niacina">Niacina (B3)</option>
-          <option value="B8">Biotina (B8)</option>
-          <option value="Folatos">Folatos (B9)</option>
-          <option value="B12">Cobalamina (B12)</option>
-          <option value="C">Vitamina C</option>
-          <option value="A">Vitamina A</option>
-          <option value="D">Vitamina D</option>
-          <option value="E">Vitamina E</option>
-        </optgroup>
-      </select>
+
+      <!-- Formulario de filtros -->
+      <div class="flex flex-col md:flex-row justify-center items-center mb-4 space-y-4 md:space-y-0 md:space-x-4">
+
+        <!-- Select para características nutricionales -->
+        <select class="w-full md:w-1/2 p-3 bg-white border border-gray-300 rounded-lg shadow-md"
+          [(ngModel)]="selectedMacro">
+          <option value="undefined">Selecciona una característica</option>
+          <optgroup label="Macros">
+            <option value="calorias">Calorías</option>
+            <option value="proteinas">Proteínas</option>
+            <option value="grasas">Grasas</option>
+            <option value="AGSaturados">Ácidos Grasos Saturados</option>
+            <option value="AGMonoInSaturados">Ácidos Grasos Monoinsaturados</option>
+            <option value="AGPoliinsaturados">Ácidos Grasos Poliinsaturados</option>
+            <option value="Omega3">Omega 3</option>
+            <option value="C182Linoleico">C18:2 Linoleico</option>
+            <option value="Colesterol">Colesterol</option>
+            <option value="carbohidratos">Carbohidratos</option>
+            <option value="fibra">Fibra</option>
+            <option value="agua">Agua</option>
+          </optgroup>
+          <optgroup label="Minerales">
+            <option value="calcio">Calcio</option>
+            <option value="Hierro">Hierro</option>
+            <option value="Yodo">Yodo</option>
+            <option value="Magnesio">Magnesio</option>
+            <option value="Zinc">Zinc</option>
+            <option value="Sodio">Sodio</option>
+            <option value="Potasio">Potasio</option>
+            <option value="Fosforo">Fósforo</option>
+            <option value="Selenio">Selenio</option>
+          </optgroup>
+          <optgroup label="Vitaminas">
+            <option value="Tiamina">Tiamina (B1)</option>
+            <option value="Riboflavina">Riboflavina (B2)</option>
+            <option value="Niacina">Niacina (B3)</option>
+            <option value="B8">Biotina (B8)</option>
+            <option value="Folatos">Folatos (B9)</option>
+            <option value="B12">Cobalamina (B12)</option>
+            <option value="C">Vitamina C</option>
+            <option value="A">Vitamina A</option>
+            <option value="D">Vitamina D</option>
+            <option value="E">Vitamina E</option>
+          </optgroup>
+        </select>
+
+        <!-- Checkboxes para Fruta y Verdura -->
+        <div class="flex space-x-4">
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" [(ngModel)]="isFruitSelected">
+            <span class="ml-2 text-gray-700">Fruta</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" [(ngModel)]="isVegetableSelected">
+            <span class="ml-2 text-gray-700">Verdura</span>
+          </label>
+        </div>
+
+        <!-- Buscador -->
+        <input class="w-full md:w-1/3 p-3 bg-white border border-gray-300 rounded-lg shadow-md" type="text"
+          placeholder="Buscar..." [(ngModel)]="searchQuery">
+      </div>
+
+      <!-- Botones de Buscar y Limpiar -->
+      <div class="flex justify-center space-x-4 mt-4">
+        <button (click)="applyFilters()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Buscar
+        </button>
+        <button (click)="clearFilters()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+          Limpiar
+        </button>
+      </div>
     </div>
   </div>
 </section>
 
-
-
-
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-12 py-12">
-  @for (fruit of orderedList; track $index) {
+  <!-- Código para mostrar las frutas filtradas -->
+  @for(fruit of orderedList; track fruit) {
 
-  <!-- @if (orderMacro === 'fibra') {
 
-  @if (fruit.macros.fibra > 2.5) {
-  <section class="text-gray-600 body-font  border-4 border-red-500" (click)="goTo(fruit.nombre)">
-    <div class="container px-5 py-8 mx-auto ">
-      <div class="rounded-lg h-64 overflow-hidden">
-        <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
+  <div class="w-full max-w-sm bg-white border border-gray-100 rounded-lg shadow flex flex-col h-full">
+    <a class="flex-shrink-0 h-4/6">
+      <img class="w-full h-full object-cover rounded-t-lg" [src]="fruit.imagen" alt="product image" />
+    </a>
+    <div class="flex-grow px-5 pb-5 flex flex-col justify-between">
+      <a>
+        <h5 class="text-3xl font-semibold tracking-tight text-black">{{ fruit.nombre }}</h5>
+      </a>
+      <div class="flex items-center justify-between mt-auto">
+        <span class="text-xl font-bold">{{ selectedMacro }}: {{ fruit[selectedMacro] }} {{ measurementValue }}</span>
+        <a (click)="goTo(fruit.nombre)"
+          class="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ver
+          más</a>
       </div>
-      <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
-        {{ fruit.nombre }}
-      </h2>
-
-      <p class="text-2xl font-bold text-center text-white bg-red-500 p-4 rounded-lg shadow-lg mt-4">
-        NO DEBERIAS COMER
-      </p>
-
-
     </div>
-  </section>
+  </div>
   }
-
-
-  @if (fruit.macros.fibra > 1.5 && fruit.macros.fibra <= 2.5) { <section
-    class="text-gray-600 body-font  border-4 border-yellow-500" (click)="goTo(fruit.nombre)">
-    <div class="container px-5 py-8 mx-auto ">
-      <div class="rounded-lg h-64 overflow-hidden">
-        <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
-      </div>
-
-      <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
-        {{ fruit.nombre }}
-      </h2>
-
-      <p class="text-2xl font-bold text-center text-white bg-yellow-500 p-4 rounded-lg shadow-lg mt-4">
-        PUEDES COMER CON MODERACION
-      </p>
-
-
-    </div>
-    </section>
-    }
-
-
-    @if (fruit.macros.fibra <= 1.5) {
-      <section class="text-gray-600 body-font  border-4 border-green-500"
-      (click)="goTo(fruit.nombre)">
-      <div class="container px-5 py-8 mx-auto ">
-        <div class="rounded-lg h-64 overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
-        </div>
-        <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
-          {{ fruit.nombre }}
-        </h2>
-        <p class="text-2xl font-bold text-center text-white bg-green-500 p-4 rounded-lg shadow-lg mt-4">
-          PUEDES COMER
-        </p>
-
-
-      </div>
-      </section>
-      }
-
-
-
-      } -->
-  <!-- @if (orderMacro !== 'fibra') { -->
-  <!-- <section class="text-gray-600 body-font  border-4 border-gray-500"
-        (click)="goTo(fruit.nombre)">
-        <div class="container px-5 py-8 mx-auto ">
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" [src]="fruit.imagen">
-          </div>
-          <h2 class="text-2xl font-bold text-center text-black   p-4  mt-4">
-            {{ fruit.nombre }}
-          </h2>
-          <p class="text-2xl font-bold text-center text-black bg-gray-200 p-4 rounded-lg shadow-lg mt-4">
-            {{orderMacro}}: {{fruit[orderMacro]}} {{measurementValue}}
-          </p>
-
-
-        </div>
-        </section> -->
-
-
-        <div class="w-full max-w-sm bg-white border border-gray-100 rounded-lg shadow flex flex-col h-full">
-          <a  class="flex-shrink-0 h-4/6">
-            <img class="w-full h-full object-cover rounded-t-lg " [src]="fruit.imagen" alt="product image" />
-          </a>
-          <div class="flex-grow px-5 pb-5 flex flex-col justify-between">
-            <a >
-              <h5 class="text-3xl font-semibold tracking-tight text-black">{{ fruit.nombre }}</h5>
-            </a>
-
-            <div class="flex items-center justify-between mt-auto">
-              <span class="text-xl font-bold">{{ orderMacro }}: {{ fruit[orderMacro] }} {{ measurementValue }}</span>
-              <a (click)="goTo(fruit.nombre)"
-                class="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ver más</a>
-            </div>
-          </div>
-        </div>
-
-
-
-  }
-  <!-- } -->
-
-
 </div>
