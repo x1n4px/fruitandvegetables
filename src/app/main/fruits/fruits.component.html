@@ -90,11 +90,17 @@
     </a>
     <div class="flex-grow px-5 pb-5 flex flex-col justify-between">
       <a>
-        <h5 class="text-3xl font-semibold tracking-tight text-black">{{ fruit.nombre }}</h5>
+
+        @if (storedCountry == 'EN') {
+        <h5 class="text-3xl font-semibold tracking-tight text-black">{{ fruit.EN }}</h5>
+        }
+        @else {
+        <h5 class="text-3xl font-semibold tracking-tight text-black">{{ fruit.ES }}</h5>
+        }
       </a>
       <div class="flex items-center justify-between mt-auto">
         <span class="text-xl font-bold">{{ selectedMacro }}: {{ fruit[selectedMacro] }} {{ measurementValue }}</span>
-        <a (click)="goTo(fruit.nombre)"
+        <a (click)="goTo(fruit.ES)"
           class="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ver
           más</a>
       </div>

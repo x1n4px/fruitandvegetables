@@ -1,12 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
-
+  constructor(private http: HttpClient) {
+    this.loadFruits();
+  }
+/*
   fruits = [
     {
       "nombre": "Aguacate",
@@ -1688,7 +1692,9 @@ export class DataService {
       },
       "imagen": "https://alimentamerindades.org/wp-content/uploads/2024/03/CALABACIN-ECOLOGICO-COMEDELAHUERTA-1.jpg"
     }
-  ]
+  ]*/
+
+  fruits: any[] = [];
 
   private measurementvalue: { [key: string]: string } = {
     "calorias": "Kcal",
@@ -1724,6 +1730,14 @@ export class DataService {
     "E": "mg"
   };
 
+  // Método para cargar las frutas desde el archivo JSON
+  private loadFruits() {
+    this.http.get<any[]>('/assets/datos.json') // Asegúrate que la ruta sea correcta
+      .subscribe(data => {
+        this.fruits = data;
+      });
+  }
+
   // Método para obtener la unidad de medida
   getMeasurementUnit(key: keyof typeof this.measurementvalue): string {
     return this.measurementvalue[key] || "Unidad no encontrada";
@@ -1734,7 +1748,7 @@ export class DataService {
   }
 
   getFruit(name: string) {
-    return this.fruits.find(fruit => fruit.nombre === name);
+    return this.fruits.find(fruit => fruit.ES === name);
   }
 
   flattenFruitData(fruit:any) {
@@ -1745,5 +1759,7 @@ export class DataService {
       ...fruit.macros.vitaminas
     };
   }
+
+
 
 }

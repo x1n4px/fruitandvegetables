@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../service/data.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CountryService } from '../../service/country.service';
 
 @Component({
   selector: 'app-fruits',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, HttpClientModule],
   templateUrl: './fruits.component.html',
   styleUrl: './fruits.component.css'
 })
@@ -14,7 +16,7 @@ export class FruitsComponent implements OnInit {
 
 
 
-  selectedMacro: string = 'undefined'; // Preselecciona el valor como 'undefined'
+  selectedMacro: string = 'calorias'; // Preselecciona el valor como 'undefined'
   isFruitSelected: boolean = false; // Preselección: desmarcado
   isVegetableSelected: boolean = false; // Preselección: desmarcado
   searchQuery: string = '';
@@ -28,21 +30,31 @@ export class FruitsComponent implements OnInit {
 
   measurementValue: string = 'g';
 
-  constructor(private dataService: DataService, private router: Router) { }
+  storedCountry: string = 'ES';
+
+  constructor(private dataService: DataService, private router: Router, private countryService: CountryService) {
+
+  }
 
 
   ngOnInit(): void {
     this.fruits = this.dataService.getAllFruits();
     this.orderedList = this.orderedList = this.fruits.sort();
+    this.storedCountry = 'ES'
+    // Suscribirse a los cambios en el país seleccionado
+    this.countryService.selectedCountry$.subscribe(country => {
+      this.storedCountry = country;
+    });
+
   }
 
-  filterFruits(selectedAttribute : any) {
+  filterFruits(selectedAttribute: any) {
     const attribute = selectedAttribute.value;
     this.measurementValue = this.dataService.getMeasurementUnit(attribute);
     if (attribute) {
       this.orderMacro = attribute;
       this.orderedList = this.getFruitsOrderedBy(attribute);
-    } else if(attribute === 'undefined') {
+    } else if (attribute === 'undefined') {
       this.orderedList = this.fruits.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
     }
   }
@@ -59,7 +71,7 @@ export class FruitsComponent implements OnInit {
   applyFilters() {
     this.orderedList = this.fruits.filter(fruit => {
       const matchesCategory = (this.isFruitSelected && fruit.tipo === 'Fruta') ||
-                              (this.isVegetableSelected && fruit.tipo === 'Verdura');
+        (this.isVegetableSelected && fruit.tipo === 'Verdura');
       const matchesSearch = !this.searchQuery || fruit.nombre.toLowerCase().includes(this.searchQuery.toLowerCase());
       const matchesMacro = this.getFruitsOrderedBy(this.selectedMacro);
 

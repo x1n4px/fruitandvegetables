@@ -18,7 +18,7 @@ export class ProductInfoComponent implements OnInit {
   }
   ngOnInit(): void {
     const name = this.route.snapshot.paramMap.get('name')!;
-
+    console.log(name)
     this.product = this.dataService.getFruit(name)
   }
 }
