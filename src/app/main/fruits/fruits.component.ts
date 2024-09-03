@@ -92,7 +92,6 @@ export class FruitsComponent implements OnInit {
 
 
   goTo(name: string): void {
-    console.log(name)
     this.router.navigate(['data/', name]);
   }
 
